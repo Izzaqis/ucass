@@ -20,10 +20,10 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-            <a class="navbar-brand brand-logo" href="{{ url('/admin/home') }}">
+            <a class="navbar-brand brand-logo" href="{{ url('/committee/home') }}">
                 <img style="height: 50px;" src="{{ asset('design/assets/images/logo.png') }}" alt="logo" />
             </a>
-            <a class="navbar-brand brand-logo-mini" href="{{ url('/admin/home') }}">
+            <a class="navbar-brand brand-logo-mini" href="{{ url('/committee/home') }}">
                 <img style="height: 50px; " src="{{ asset('design/assets/images/logo.png') }}" alt="logo" />
             </a>
         </div>
