@@ -83,14 +83,12 @@
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Club Sharing</span>
                 <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
               </a>
               </div>
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
                 <span class="menu-title">Events</span>
                 <i class="menu-arrow"></i>
-                <i class="mdi mdi-medical-bag menu-icon"></i>
               </a>
           </ul>
         </nav>
