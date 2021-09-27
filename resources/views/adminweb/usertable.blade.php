@@ -37,6 +37,7 @@
                     <th> City </th>
                     <th> Poscode </th>
                     <th> Email </th>
+                    <th>Edit</th>
                   </tr>
                 </thead>
                 <tbody>
