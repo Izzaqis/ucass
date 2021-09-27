@@ -76,14 +76,12 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">
                 <span class="menu-title">Dashboard</span>
-                <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <span class="menu-title">Club Profile</span>
                 <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
@@ -94,7 +92,6 @@
               <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
                 <span class="menu-title">Club Sharing</span>
                 <i class="menu-arrow"></i>
-                <i class="mdi mdi-medical-bag menu-icon"></i>
               </a>
               <div class="collapse" id="general-pages">
                 <ul class="nav flex-column sub-menu">
@@ -106,7 +103,6 @@
                 <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
                   <span class="menu-title">Events</span>
                   <i class="menu-arrow"></i>
-                  <i class="mdi mdi-medical-bag menu-icon"></i>
                 </a>
                 <div class="collapse" id="general-pages">
                   <ul class="nav flex-column sub-menu">
@@ -118,7 +114,6 @@
                     <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
                       <span class="menu-title">Participants</span>
                       <i class="menu-arrow"></i>
-                      <i class="mdi mdi-medical-bag menu-icon"></i>
                     </a>
                     <div class="collapse" id="general-pages">
                       <ul class="nav flex-column sub-menu">

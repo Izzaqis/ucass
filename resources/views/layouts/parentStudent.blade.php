@@ -76,20 +76,26 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">
                 <span class="menu-title">Dashboard</span>
-                <i class="mdi mdi-home menu-icon"></i>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-title">Clubs</span>
+                <i class="menu-arrow"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
                 <span class="menu-title">Club Sharing</span>
                 <i class="menu-arrow"></i>
               </a>
-              </div>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-                <span class="menu-title">Events</span>
-                <i class="menu-arrow"></i>
-              </a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                  <span class="menu-title">Events</span>
+                  <i class="menu-arrow"></i>
+                </a>
+            </li>
           </ul>
         </nav>
         <!-- partial -->
