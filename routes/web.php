@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserAllController;
+use App\Http\Controllers\CommitteeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,8 @@ Route::resource('/admin/users', UserAllController::class)->middleware('is_admin'
 Route::get('/admin/committee/approve/{id}', [UserAllController::class, 'approved'])->name('users.committee')->middleware('is_admin');
 
 Route::get('/committee/home', [HomeController::class, 'committeeHome'])->name('committeeweb.committeeHome')->middleware('is_admin');
+Route::resource('/committee/users', CommitteeController::class)->middleware('is_admin');
+Route::get('/committee/student/approve/{id}', [CommitteeController::class, 'approved'])->name('users.student')->middleware('is_admin');
 
 Route::get('/student/home', [HomeController::class, 'studentHome'])->name('studentweb.studentHome')->middleware('is_admin');
 

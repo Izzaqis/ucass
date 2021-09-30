@@ -59,7 +59,7 @@ class CommitteeController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-        return view('adminweb.edituser', compact('user'));
+        return view('committeeweb.editcommittee', compact('user'));
     }
 
     /**
