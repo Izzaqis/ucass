@@ -85,8 +85,7 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Update Student Information</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">View Student Information</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ url('/admin/users') }}">View Student Information</a></li>
                 </ul>
               </div>
             <li class="nav-item">
@@ -97,7 +96,7 @@
               <div class="collapse" id="general-pages">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Club Information </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Update Club Information </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> View Club Information </a></li>
                 </ul>
               </div>
           </ul>

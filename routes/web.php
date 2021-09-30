@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserAllController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,13 +17,14 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+  return view('auth.login');
 });
 
 Auth::routes();
 
 Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('adminweb.adminHome')->middleware('is_admin');
 Route::resource('/admin/users', UserAllController::class)->middleware('is_admin');
+Route::get('/admin/committee/approve/{id}', [UserAllController::class, 'approved'])->name('users.committee')->middleware('is_admin');
 
 Route::get('/committee/home', [HomeController::class, 'committeeHome'])->name('committeeweb.committeeHome')->middleware('is_admin');
 
