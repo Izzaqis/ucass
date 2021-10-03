@@ -1,4 +1,4 @@
-@extends('layouts.parentCommittee')
+@extends('layouts.parentAdmin')
 
 @section('head')
 
