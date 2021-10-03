@@ -15,4 +15,17 @@ class Club extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'date',
+        'category',
+        'zone',
+        'advisor'
+    ];
 }

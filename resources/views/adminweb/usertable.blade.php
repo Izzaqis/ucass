@@ -47,7 +47,7 @@
                     <th> Poscode </th>
                     <th> Email </th>
                     <th>Edit</th>
-                    <th>Committee</th>
+                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -64,15 +64,24 @@
                             <a href="{{ route('users.edit',$user->id)}}" class="btn btn-primary">Edit</a>
                         </td>
                         <td>
-                        {{-- <a href="{{route('users.approve', $user->id)}}" class="btn btn-success">Approve</a> --}}
-                            <form action="{{ route('users.committee', $user->id) }}">
-                                {{-- @method('PATCH')  --}}
-                                @csrf
-                                <button class="btn btn-primary" type="submit"
-                                onclick="return confirm('Are you sure you want to make this user as a committee?')">
-                                Approve</button>
-                          </form>
+                            <form action="{{ route('users.destroy', $user->id)}}" method="post">
+                              @csrf
+                              @method('DELETE')
+                              <button class="btn btn-danger" type="submit"
+                              onclick="return confirm('Are you sure you want to delete this user?')">
+                                Delete</button>
+                            </form>
                         </td>
+                        {{-- <td> --}}
+                        {{-- <a href="{{route('users.approve', $user->id)}}" class="btn btn-success">Approve</a> --}}
+                            {{-- <form action="{{ route('users.committee', $user->id) }}"> --}}
+                                {{-- @method('PATCH')  --}}
+                                {{-- @csrf --}}
+                                {{-- <button class="btn btn-primary" type="submit" --}}
+                                {{-- onclick="return confirm('Are you sure you want to make this user as a committee?')"> --}}
+                                {{-- Approve</button> --}}
+                          {{-- </form> --}}
+                        {{-- </td> --}}
                     </tr>
                     @endif
                     @endforeach
