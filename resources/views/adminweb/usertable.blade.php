@@ -46,13 +46,15 @@
                     <th> City </th>
                     <th> Poscode </th>
                     <th> Email </th>
+                    <th> Role </th>
+                    <th> Club </th>
                     <th>Edit</th>
                     <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
                     @foreach($users as $user)
-                    @if ($user->is_admin == 0 && $user->is_commitee == 0)
+                    @if ($user->is_admin == 0 || $user->is_commitee == 1)
                     <tr>
                         <td>{{$user->name}}</td>
                         <td>{{$user->mobile}}</td>
@@ -60,6 +62,8 @@
                         <td>{{$user->city}}</td>
                         <td>{{$user->poscode}}</td>
                         <td>{{$user->email}}</td>
+                        <td>{{$user->role}}</td>
+                        <td>{{$user->club}}</td>
                         <td>
                             <a href="{{ route('users.edit',$user->id)}}" class="btn btn-primary">Edit</a>
                         </td>

@@ -40,6 +40,8 @@ class User extends Authenticatable
         'city',
         'poscode',
         'email',
+        'role',
+        'club',
         'password',
         'is_admin'
     ];

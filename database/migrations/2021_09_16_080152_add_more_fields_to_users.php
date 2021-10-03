@@ -14,6 +14,8 @@ class AddMoreFieldsToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
+            $table->boolean('role')->nullable()->after('email');
+            $table->boolean('club')->nullable()->after('role');
             $table->boolean('is_commitee')->nullable()->after('is_admin');
         });
     }
