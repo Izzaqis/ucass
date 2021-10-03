@@ -83,7 +83,6 @@ class ClubController extends Controller
     public function destroy($id)
     {
         $club = Club::find($id);
-        $club->payments()->delete();
         $club->delete();
 
         return redirect('/admin/clubs')->with('success', 'Club deleted');

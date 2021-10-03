@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserAllController;
 use App\Http\Controllers\ClubController;
+use App\Http\Controllers\PostController;
 // use App\Http\Controllers\CommitteeController;
 
 
@@ -27,10 +28,11 @@ Auth::routes();
 
 Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('adminweb.adminHome')->middleware('is_admin');
 Route::resource('/admin/users', UserAllController::class)->middleware('is_admin');
+Route::resource('/admin/clubs', ClubController::class)->middleware('is_admin');
 Route::get('/admin/committee/approve/{id}', [UserAllController::class, 'approved'])->name('users.committee')->middleware('is_admin');
 
 Route::get('/committee/home', [HomeController::class, 'committeeHome'])->name('committeeweb.committeeHome')->middleware('is_admin');
-Route::resource('/admin/clubs', ClubController::class)->middleware('is_admin');
+Route::resource('/committee/sharing', PostController::class)->middleware('is_admin');
 // Route::resource('/committee/users', CommitteeController::class)->middleware('is_admin');
 // Route::get('/committee/student/approve/{id}', [CommitteeController::class, 'approved'])->name('users.student')->middleware('is_admin');
 

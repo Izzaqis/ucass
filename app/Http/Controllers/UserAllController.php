@@ -83,7 +83,6 @@ class UserAllController extends Controller
     public function destroy($id)
     {
         $user = User::find($id);
-        $user->payments()->delete();
         $user->delete();
 
         return redirect('/admin/users')->with('success', 'User deleted');

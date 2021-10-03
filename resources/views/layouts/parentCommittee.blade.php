@@ -85,7 +85,7 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Update Club Profile </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">View Club Profile </a></li>
                 </ul>
               </div>
             <li class="nav-item">
@@ -96,7 +96,7 @@
               <div class="collapse" id="general-pages">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Club Sharing </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Update Club Sharing </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ url('/committee/sharing') }}"> View Club Sharing </a></li>
                 </ul>
               </div>
               <li class="nav-item">
@@ -107,7 +107,7 @@
                 <div class="collapse" id="general-pages">
                   <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Events </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Update Events </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> View Events </a></li>
                   </ul>
                 </div>
                 <li class="nav-item">
@@ -118,7 +118,7 @@
                     <div class="collapse" id="general-pages">
                       <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Participant </a></li>
-                        <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Update Particpant </a></li>
+                        <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> View Particpant </a></li>
                       </ul>
                     </div>
           </ul>
