@@ -1,4 +1,4 @@
-@extends('layouts.parentCommittee')
+@extends('layouts.parentAdmin')
 
 @section('head')
 
@@ -12,11 +12,18 @@
 
 <div class="content-wrapper">
 
+    <div class="page-header">
+      <h3 class="page-title">
+        <span class="page-title-icon bg-gradient-primary text-white mr-2">
+          <i class="mdi mdi-home"></i>
+        </span> Dashboard
+      </h3>
+    </div>
     <div class="row">
       <div class="col-12 grid-margin">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Club Sharing</h4>
+            <h4 class="card-title">Committee Information</h4>
             <div class="table-responsive">
 
                 <div class="search-field d-none d-md-block col-md-6 float-right mb-3" >
@@ -33,32 +40,31 @@
               <table class="table" id="myTable">
                 <thead>
                   <tr>
-                    <th>Id</th>
-                    <th>Title</th>
+                    <th> Name </th>
+                    <th> Mobile </th>
+                    <th> Address </th>
+                    <th> City </th>
+                    <th> Poscode </th>
+                    <th> Email </th>
                     <th>Edit</th>
-                    <th>Delete</th>
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach($posts as $post)
-                    @if (Auth::user()->club == $post->name)
+                    @foreach($users as $user)
+
                     <tr>
-                        <td>{{$post->id}}</td>
-                        <td>{{$post->title}}</td>
+                        <td>{{$user->name}}</td>
+                        <td>{{$user->mobile}}</td>
+                        <td>{{$user->address}}</td>
+                        <td>{{$user->city}}</td>
+                        <td>{{$user->poscode}}</td>
+                        <td>{{$user->email}}</td>
                         <td>
-                            <a href="{{ route('posts.edit',$post->id)}}" class="btn btn-primary">Edit</a>
+                            <a href="{{ route('users.edit',$user->id)}}" class="btn btn-primary">Edit</a>
                         </td>
-                        <td>
-                            <form action="{{ route('posts.destroy', $post->id)}}" method="post">
-                              @csrf
-                              @method('DELETE')
-                              <button class="btn btn-danger" type="submit"
-                              onclick="return confirm('Are you sure you want to delete this sharing posts?')">
-                                Delete</button>
-                            </form>
-                        </td>
+
                     </tr>
-                    @endif
+
                     @endforeach
                 </tbody>
               </table>

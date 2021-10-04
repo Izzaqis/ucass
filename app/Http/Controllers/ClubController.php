@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Club;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ClubController extends Controller
@@ -47,7 +48,11 @@ class ClubController extends Controller
      */
     public function show($id)
     {
-        //
+        $club = Club::find($id);
+        $name = $club->name;
+        $users = User::where('club', $name)->orderBy('name', 'ASC')->get();
+
+        return view('committeeweb.clubMemberstable', compact('users'));
     }
 
     /**

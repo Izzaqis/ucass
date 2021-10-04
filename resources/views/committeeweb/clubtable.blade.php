@@ -45,6 +45,7 @@
                         <th> Category </th>
                         <th> Zone </th>
                         <th> Advisor </th>
+                        <th>Show Members</th>
                         <th>Edit</th>
                         <th>Delete</th>
                       </tr>
@@ -58,6 +59,9 @@
                             <td>{{$club->category}}</td>
                             <td>{{$club->zone}}</td>
                             <td>{{$club->advisor}}</td>
+                            <td>
+                                <a href="{{ route('clubs.show',$club->id)}}" class="btn btn-primary">View</a>
+                            </td>
                             <td>
                                 <a href="{{ route('clubs.edit',$club->id)}}" class="btn btn-primary">Edit</a>
                             </td>
