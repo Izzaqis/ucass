@@ -64,7 +64,7 @@ class ClubController extends Controller
     public function edit($id)
     {
         $club = Club::find($id);
-        return view('committeeweb.edituser', compact('club'));
+        return view('committeeweb.editclub', compact('club'));
     }
 
     /**
