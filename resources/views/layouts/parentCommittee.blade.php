@@ -107,7 +107,7 @@
                 <div class="collapse" id="general-pages">
                   <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Events </a></li>
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> View Events </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ url('/committee/event') }}"> View Events </a></li>
                   </ul>
                 </div>
                 <li class="nav-item">
