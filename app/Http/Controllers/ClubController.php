@@ -76,7 +76,24 @@ class ClubController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'date' => 'required',
+            'category' => 'required',
+            'zone' => 'required',
+            'advisor' => 'required',
+        ]);
+
+
+        $club = Club::find($id);
+        $club->name = $request->get('name');
+        $club->date = $request->get('date');
+        $club->category = $request->get('category');
+        $club->zone = $request->get('zone');
+        $club->advisor = $request->get('advisor');
+        $club->save();
+
+        return redirect('/admin/clubs')->with('success', 'Clubs Updated!');
     }
 
     /**

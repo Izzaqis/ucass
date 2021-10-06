@@ -71,7 +71,30 @@ class UserAllController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'mobile' => 'required',
+            'address' => 'required',
+            'city' => 'required',
+            'poscode' => 'required',
+            'email' => 'required',
+            'role' => 'required',
+            'club' => 'required',
+        ]);
+
+
+        $user = User::find($id);
+        $user->name = $request->get('name');
+        $user->mobile = $request->get('mobile');
+        $user->address = $request->get('address');
+        $user->city = $request->get('city');
+        $user->poscode = $request->get('poscode');
+        $user->email = $request->get('email');
+        $user->role = $request->get('role');
+        $user->club = $request->get('club');
+        $user->save();
+
+        return redirect('/admin/users')->with('success', 'User Updated!');
     }
 
     /**
