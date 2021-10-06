@@ -52,6 +52,7 @@
                     </thead>
                     <tbody>
                         @foreach($events as $event)
+                        @if (Auth::user()->club == $event->name)
 
                         <tr>
                             <td>{{$event->date}}</td>
@@ -61,7 +62,7 @@
                             <td>{{$event->level}}</td>
                             <td>{{$event->organizer}}</td>
                             <td>{{$event->location}}</td>
-                            <td>{{$event->time}}</td>
+                            <td>{{$event->eventime}}</td>
                             <td>{{$event->link}}</td>
                             <td>{{$event->fundcash}}</td>
                             <td>{{$event->fundtransport}}</td>
@@ -80,7 +81,7 @@
                                 </form>
                             </td>
                         </tr>
-
+                        @endif
                         @endforeach
                     </tbody>
                   </table>

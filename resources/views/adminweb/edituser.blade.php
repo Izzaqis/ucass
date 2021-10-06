@@ -18,46 +18,48 @@
               <h4 class="card-title">Student Information</h4>
               <p class="card-description"> </p>
 
-                    <form enctype="multipart/form-data"  method="post" action="{{ route('users.update', $user->id) }}">
-                        @method('PATCH')
-                        {{ csrf_field() }}
+              <div class="card-body card-block">
+                <form enctype="multipart/form-data" method="post" action="{{ route('users.update', $user->id) }}">
+                    @method('PATCH')
+                    {{ csrf_field() }}
 
                         <div class="form-group">
-                        <label for="Enter Name">Name</label>
-                        <input type="text" class="form-control" id="Enter name" placeholder="Name" value="{{ $user->name }}">
+                            <label for="Enter Name">Name</label>
+                            <input type="text" class="form-control" id="Enter name" placeholder="Name" value="{{ $user->name }}">
                         </div>
                         <div class="form-group">
-                        <label for="Enter phone number">Phone Number</label>
-                        <input type="text" class="form-control" id="Enter phone number" placeholder="Mobile" value="{{ $user->mobile }}">
+                            <label for="Enter phone number">Phone Number</label>
+                            <input type="text" class="form-control" id="Enter phone number" placeholder="Mobile" value="{{ $user->mobile }}">
                         </div>
                         <div class="form-group">
-                        <label for="Enter address">Address</label>
-                        <input type="text" class="form-control" id="Enter address" placeholder="Address" value="{{ $user->address }}">
+                            <label for="Enter address">Address</label>
+                            <input type="text" class="form-control" id="Enter address" placeholder="Address" value="{{ $user->address }}">
                         </div>
                         <div class="form-group">
-                        <label for="Enter poscode">Poscode</label>
-                        <input type="text" class="form-control" id="Enter poscode" placeholder="Poscode" value="{{ $user->poscode }}">
+                            <label for="Enter poscode">Poscode</label>
+                            <input type="text" class="form-control" id="Enter poscode" placeholder="Poscode" value="{{ $user->poscode }}">
                         </div>
                         <div class="form-group">
-                        <label for="Enter city">City</label>
-                        <input type="text" class="form-control" id="Enter city" placeholder="City" value="{{ $user->city }}">
+                            <label for="Enter city">City</label>
+                            <input type="text" class="form-control" id="Enter city" placeholder="City" value="{{ $user->city }}">
                         </div>
                         <div class="form-group">
-                        <label for="Enter email">Email</label>
-                        <input type="text" class="form-control" id="Enter email" placeholder="Email" value="{{ $user->email }}">
+                            <label for="Enter email">Email</label>
+                            <input type="text" class="form-control" id="Enter email" placeholder="Email" value="{{ $user->email }}">
                         </div>
                         <div class="form-group">
-                        <label for="Enter role">Role</label>
-                        <input type="text" class="form-control" id="Enter role" placeholder="Role" value="{{ $user->role }}">
+                            <label for="Enter role">Role</label>
+                            <input type="text" class="form-control" id="Enter role" placeholder="Role" value="{{ $user->role }}">
                         </div>
                         <div class="form-group">
-                        <label for="Enter club">Club</label>
-                        <input type="text" class="form-control" id="Enter club" placeholder="Club" value="{{ $user->club }}">
+                            <label for="Enter club">Club</label>
+                            <input type="text" class="form-control" id="Enter club" placeholder="Club" value="{{ $user->club }}">
                         </div>
 
                         <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
                         <button class="btn btn-light">Cancel</button>
-                    </form>
+                </form>
+                </div>
 
             </div>
         </div>
