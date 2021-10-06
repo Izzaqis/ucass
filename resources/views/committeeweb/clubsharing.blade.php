@@ -46,10 +46,10 @@
                         <td>{{$post->id}}</td>
                         <td>{{$post->title}}</td>
                         <td>
-                            <a href="{{ route('posts.edit',$post->id)}}" class="btn btn-primary">Edit</a>
+                            <a href="{{ route('sharing.edit',$post->id)}}" class="btn btn-primary">Edit</a>
                         </td>
                         <td>
-                            <form action="{{ route('posts.destroy', $post->id)}}" method="post">
+                            <form action="{{ route('sharing.destroy', $post->id)}}" method="post">
                               @csrf
                               @method('DELETE')
                               <button class="btn btn-danger" type="submit"

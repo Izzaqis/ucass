@@ -46,8 +46,8 @@
                         <th> Funding (Transport) </th>
                         <th> Note </th>
                         <th> Poster </th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th> Edit</th>
+                        <th> Delete</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -68,10 +68,10 @@
                             <td>{{$event->note}}</td>
                             <td>{{$event->poster}}</td>
                             <td>
-                                <a href="{{ route('event.edit',$club->id)}}" class="btn btn-primary">Edit</a>
+                                <a href="{{ route('event.edit',$event->id)}}" class="btn btn-primary">Edit</a>
                             </td>
                             <td>
-                                <form action="{{ route('event.destroy', $club->id)}}" method="post">
+                                <form action="{{ route('event.destroy', $event->id)}}" method="post">
                                   @csrf
                                   @method('DELETE')
                                   <button class="btn btn-danger" type="submit"
