@@ -14,7 +14,7 @@ class AddFieldsToEvent extends Migration
     public function up()
     {
         Schema::table('event', function (Blueprint $table) {
-            //
+            $table->text('eventime')->nullable()->after('poster');
         });
     }
 

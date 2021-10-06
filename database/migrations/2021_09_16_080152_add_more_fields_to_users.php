@@ -14,8 +14,8 @@ class AddMoreFieldsToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->boolean('role')->nullable()->after('email');
-            $table->boolean('club')->nullable()->after('role');
+            $table->text('role')->nullable()->after('email');
+            $table->text('club')->nullable()->after('role');
             $table->boolean('is_commitee')->nullable()->after('is_admin');
         });
     }
@@ -28,7 +28,7 @@ class AddMoreFieldsToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('is_commitee');
+           //
         });
     }
 }
