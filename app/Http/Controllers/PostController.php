@@ -25,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('committeeweb.addclubsharing');
     }
 
     /**
@@ -36,7 +36,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'title'=>'required',
+            'description' => 'required',
+        ]);
+
+        $post = new Post([
+            'name'=> $request->get('name'),
+            'title'=> $request->get('title'),
+            'description' => $request->get('description'),
+        ]);
+
+        $post->save();
+        return redirect('/committee/sharing')->with('success', 'Club Sharing is added');
     }
 
     /**

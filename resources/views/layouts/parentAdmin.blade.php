@@ -95,7 +95,7 @@
               </a>
               <div class="collapse" id="general-pages">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Club Information </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ url('/admin/clubs/create') }}"> Add Club Information </a></li>
                   <li class="nav-item"> <a class="nav-link" href="{{ url('/admin/clubs') }}"> View Club Information </a></li>
                 </ul>
               </div>

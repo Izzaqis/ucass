@@ -95,7 +95,7 @@
               </a>
               <div class="collapse" id="general-pages">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Club Sharing </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ url('/committee/sharing/create') }}"> Add Club Sharing </a></li>
                   <li class="nav-item"> <a class="nav-link" href="{{ url('/committee/sharing') }}"> View Club Sharing </a></li>
                 </ul>
               </div>
@@ -106,7 +106,7 @@
                 </a>
                 <div class="collapse" id="general-pages">
                   <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Events </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ url('/committee/event/create') }}"> Add Events </a></li>
                     <li class="nav-item"> <a class="nav-link" href="{{ url('/committee/event') }}"> View Events </a></li>
                   </ul>
                 </div>

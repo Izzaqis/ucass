@@ -26,7 +26,7 @@ class ClubController extends Controller
      */
     public function create()
     {
-        //
+        return view('adminweb.addclub');
     }
 
     /**
@@ -37,7 +37,24 @@ class ClubController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'date'=>'required',
+            'category' => 'required',
+            'zone' => 'required',
+            'advisor' => 'required',
+        ]);
+
+        $club = new Club([
+            'name'=> $request->get('name'),
+            'date'=> $request->get('date'),
+            'category' => $request->get('category'),
+            'zone' => $request->get('zone'),
+            'advisor' => $request->get('advisor'),
+        ]);
+
+        $club->save();
+        return redirect('/admin/clubs')->with('success', 'Club registered');
     }
 
     /**

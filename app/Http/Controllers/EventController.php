@@ -25,7 +25,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('committeeweb.addevent');
     }
 
     /**
@@ -36,7 +36,42 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'date'=>'required',
+            'eventname' => 'required',
+            'category' => 'required',
+            'level' => 'required',
+            'organizer'=>'required',
+            'location'=>'required',
+            'link' => 'required',
+            'fundcash' => 'required',
+            'fundtransport' => 'required',
+            'description' => 'required',
+            'note'=>'required',
+            'poster' => 'required',
+            'eventime' => 'required',
+        ]);
+
+        $event = new Event([
+            'name'=> $request->get('name'),
+            'date'=> $request->get('date'),
+            'eventname'=> $request->get('eventname'),
+            'category' => $request->get('category'),
+            'level' => $request->get('level'),
+            'organizer' => $request->get('organizer'),
+            'location'=> $request->get('location'),
+            'link'=> $request->get('link'),
+            'fundcash'=> $request->get('fundcash'),
+            'fundtransport' => $request->get('fundtransport'),
+            'description' => $request->get('description'),
+            'note' => $request->get('note'),
+            'poster' => $request->get('poster'),
+            'eventime' => $request->get('eventime'),
+        ]);
+
+        $event->save();
+        return redirect('/committee/event')->with('success', 'Club registered');
     }
 
     /**
@@ -71,7 +106,42 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+            'date'=>'required',
+            'eventname' => 'required',
+            'category' => 'required',
+            'level' => 'required',
+            'organizer'=>'required',
+            'location'=>'required',
+            'link' => 'required',
+            'fundcash' => 'required',
+            'fundtransport' => 'required',
+            'description' => 'required',
+            'note'=>'required',
+            'poster' => 'required',
+            'eventime' => 'required',
+        ]);
+
+
+        $event = Event::find($id);
+        $event->name = $request->get('name');
+        $event->date = $request->get('date');
+        $event->eventname = $request->get('eventname');
+        $event->category = $request->get('category');
+        $event->level = $request->get('level');
+        $event->organizer = $request->get('organizer');
+        $event->location = $request->get('location');
+        $event->link = $request->get('link');
+        $event->fundcash = $request->get('fundcash');
+        $event->fundtransport = $request->get('fundtransport');
+        $event->description = $request->get('description');
+        $event->note = $request->get('note');
+        $event->poster = $request->get('poster');
+        $event->eventime = $request->get('eventime');
+        $event->save();
+
+        return redirect('/committee/event')->with('success', 'Event Information Updated!');
     }
 
     /**

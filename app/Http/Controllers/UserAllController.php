@@ -77,7 +77,7 @@ class UserAllController extends Controller
             'address' => 'required',
             'city' => 'required',
             'poscode' => 'required',
-            'email' => 'required',
+            'email' => 'required|unique:users',
             'role' => 'required',
             'club' => 'required',
         ]);
