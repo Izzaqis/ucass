@@ -23,10 +23,6 @@
                         {{ csrf_field() }}
 
                         <div class="form-group">
-                            <label for="Enter Name">Name</label>
-                            <input type="text" class="form-control" id="Enter name" placeholder="Name" value="{{ $post->name }}">
-                        </div>
-                        <div class="form-group">
                             <label for="Enter title">Title</label>
                             <input type="text" class="form-control" id="Enter title" placeholder="Title" value="{{ $post->title }}">
                         </div>

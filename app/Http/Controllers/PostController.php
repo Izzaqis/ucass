@@ -37,13 +37,11 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'=>'required',
             'title'=>'required',
             'description' => 'required',
         ]);
 
         $post = new Post([
-            'name'=> $request->get('name'),
             'title'=> $request->get('title'),
             'description' => $request->get('description'),
         ]);
@@ -85,14 +83,12 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'name'=>'required',
             'title' => 'required',
             'description' => 'required',
         ]);
 
 
         $post = Post::find($id);
-        $post->name = $request->get('name');
         $post->title = $request->get('title');
         $post->description = $request->get('description');
         $post->save();
