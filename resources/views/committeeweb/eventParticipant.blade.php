@@ -16,7 +16,7 @@
       <div class="col-12 grid-margin">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Student Information</h4>
+            <h4 class="card-title">Committee Member Information</h4>
             <div class="table-responsive">
 
                 <div class="search-field d-none d-md-block col-md-6 float-right mb-3" >
@@ -34,43 +34,30 @@
                 <thead>
                   <tr>
                     <th> Name </th>
-                    <th> Role </th>
-                    <th> Club </th>
-                    <th> Details </th>
-                    <th> Delete </th>
+                    <th> Mobile </th>
+                    <th> Address </th>
+                    <th> City </th>
+                    <th> Poscode </th>
+                    <th> Email </th>
+                    <th> Details</th>
                   </tr>
                 </thead>
                 <tbody>
                     @foreach($users as $user)
-                    @if ($user->is_admin == 0 || $user->is_commitee == 1)
+
                     <tr>
                         <td>{{$user->name}}</td>
-                        <td>{{$user->role}}</td>
-                        <td>{{$user->club}}</td>
+                        <td>{{$user->mobile}}</td>
+                        <td>{{$user->address}}</td>
+                        <td>{{$user->city}}</td>
+                        <td>{{$user->poscode}}</td>
+                        <td>{{$user->email}}</td>
                         <td>
                             <a href="{{ route('users.edit',$user->id)}}" class="btn btn-primary">Edit</a>
                         </td>
-                        <td>
-                            <form action="{{ route('users.destroy', $user->id)}}" method="post">
-                              @csrf
-                              @method('DELETE')
-                              <button class="btn btn-danger" type="submit"
-                              onclick="return confirm('Are you sure you want to delete this user?')">
-                                Delete</button>
-                            </form>
-                        </td>
-                        {{-- <td> --}}
-                        {{-- <a href="{{route('users.approve', $user->id)}}" class="btn btn-success">Approve</a> --}}
-                            {{-- <form action="{{ route('users.committee', $user->id) }}"> --}}
-                                {{-- @method('PATCH')  --}}
-                                {{-- @csrf --}}
-                                {{-- <button class="btn btn-primary" type="submit" --}}
-                                {{-- onclick="return confirm('Are you sure you want to make this user as a committee?')"> --}}
-                                {{-- Approve</button> --}}
-                          {{-- </form> --}}
-                        {{-- </td> --}}
+
                     </tr>
-                    @endif
+
                     @endforeach
                 </tbody>
               </table>

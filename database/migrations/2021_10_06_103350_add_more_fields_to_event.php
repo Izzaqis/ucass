@@ -13,7 +13,7 @@ class AddMoreFieldsToEvent extends Migration
      */
     public function up()
     {
-        Schema::table('event', function (Blueprint $table) {
+        Schema::table('events', function (Blueprint $table) {
             $table->text('eventname')->nullable()->after('date');
             $table->text('category')->nullable()->after('eventname');
             $table->text('level')->nullable()->after('category');

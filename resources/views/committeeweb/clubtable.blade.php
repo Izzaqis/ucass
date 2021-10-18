@@ -38,9 +38,9 @@
                         <th> Category </th>
                         <th> Zone </th>
                         <th> Advisor </th>
-                        <th>Show Members</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
+                        <th> Show Members </th>
+                        <th> Details </th>
+                        <th> Delete </th>
                       </tr>
                     </thead>
                     <tbody>

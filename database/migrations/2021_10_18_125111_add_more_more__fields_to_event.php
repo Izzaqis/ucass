@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddFieldsToEvent extends Migration
+class AddMoreMoreFieldsToEvent extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddFieldsToEvent extends Migration
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->text('eventime')->nullable()->after('poster');
+            $table->text('type')->nullable()->after('eventime');
         });
     }
 
@@ -25,7 +25,7 @@ class AddFieldsToEvent extends Migration
      */
     public function down()
     {
-        Schema::table('event', function (Blueprint $table) {
+        Schema::table('events', function (Blueprint $table) {
             //
         });
     }

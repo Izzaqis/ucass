@@ -85,7 +85,7 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">View Club Profile </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{ url('/committee/profile') }}">View Club Profile </a></li>
                 </ul>
               </div>
             <li class="nav-item">
@@ -110,17 +110,6 @@
                     <li class="nav-item"> <a class="nav-link" href="{{ url('/committee/event') }}"> View Events </a></li>
                   </ul>
                 </div>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-                      <span class="menu-title">Participants</span>
-                      <i class="menu-arrow"></i>
-                    </a>
-                    <div class="collapse" id="general-pages">
-                      <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Add Participant </a></li>
-                        <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> View Particpant </a></li>
-                      </ul>
-                    </div>
           </ul>
         </nav>
         <!-- partial -->
@@ -132,7 +121,7 @@
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
             <div class="container-fluid clearfix">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2021 Universiti Tenaga Nasional (199601026142). All rights reserved.</span>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2021 Universiti Tenaga Nasional. All rights reserved.</span>
             </div>
           </footer>
           <!-- partial -->

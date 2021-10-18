@@ -21,6 +21,15 @@
               <form enctype="multipart/form-data" method="post" action="{{ route('event.store') }}">
                 {{ csrf_field() }}
 
+                        <div class="row form-group">
+                            <div class="col col-md-14"><label for="Enter category" class=" form-control-label">Type</label>
+                                <select name="select" id="category" class="form-control" placeholder="Category">
+                                    <option value="0">Please Select</option>
+                                    <option value="1">All Student</option>
+                                    <option value="2">Club Members</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="Enter Name">Name</label>
                             <input type="text" class="form-control" id="Enter name" placeholder="Name">
@@ -94,7 +103,7 @@
                                 <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
                               </span>
                             </div>
-                          </div>
+                        </div>
                         <div class="form-group">
                             <label for="Enter note">Note</label>
                             <input type="text" class="form-control" id="Enter note" placeholder="Note">

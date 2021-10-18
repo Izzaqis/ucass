@@ -33,20 +33,10 @@
                 <table class="table" id="myTable">
                     <thead>
                       <tr>
-                        <th> Date </th>
+                        <th> Type </th>
                         <th> Event Name</th>
-                        <th> Event Description </th>
-                        <th> Category </th>
-                        <th> Level </th>
-                        <th> Organizer </th>
-                        <th> Location </th>
-                        <th> Time </th>
-                        <th> Link </th>
-                        <th> Funding (Cash) </th>
-                        <th> Funding (Transport) </th>
-                        <th> Note </th>
-                        <th> Poster </th>
-                        <th> Edit</th>
+                        <th> Participants List</th>
+                        <th> Details</th>
                         <th> Delete</th>
                       </tr>
                     </thead>
@@ -55,19 +45,11 @@
                         @if (Auth::user()->club == $event->name)
 
                         <tr>
-                            <td>{{$event->date}}</td>
+                            <td>{{$event->type}}</td>
                             <td>{{$event->eventname}}</td>
-                            <td>{{$event->description}}</td>
-                            <td>{{$event->category}}</td>
-                            <td>{{$event->level}}</td>
-                            <td>{{$event->organizer}}</td>
-                            <td>{{$event->location}}</td>
-                            <td>{{$event->eventime}}</td>
-                            <td>{{$event->link}}</td>
-                            <td>{{$event->fundcash}}</td>
-                            <td>{{$event->fundtransport}}</td>
-                            <td>{{$event->note}}</td>
-                            <td>{{$event->poster}}</td>
+                            <td>
+                                <a href="{{ route('events.detail',$event->id)}}" class="btn btn-primary">View</a>
+                            </td>
                             <td>
                                 <a href="{{ route('event.edit',$event->id)}}" class="btn btn-primary">Edit</a>
                             </td>

@@ -16,7 +16,7 @@
       <div class="col-12 grid-margin">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title">Committee Member Information</h4>
+            <h4 class="card-title">Event Participants</h4>
             <div class="table-responsive">
 
                 <div class="search-field d-none d-md-block col-md-6 float-right mb-3" >
@@ -39,7 +39,7 @@
                     <th> City </th>
                     <th> Poscode </th>
                     <th> Email </th>
-                    <th> Edit</th>
+                    <th> Details</th>
                   </tr>
                 </thead>
                 <tbody>

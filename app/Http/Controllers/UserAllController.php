@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class UserAllController extends Controller
@@ -45,9 +46,13 @@ class UserAllController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
-        //
+        $event = Event::find($id);
+        $users = User::all();
+        return view('committeeweb.eventParticipant', compact(['events', 'users']));
+        // return view('adminweb.eventParticipant', compact('event'));
     }
 
     /**

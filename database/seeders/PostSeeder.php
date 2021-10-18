@@ -18,16 +18,19 @@ class PostSeeder extends Seeder
                 [
                     'name'=>'Running Club',
                     'title'=>'Running Tips',
-                    'description'=>'Running Tips',
-                ],
-                [
-                    'name'=>'Running Club',
-                    'title'=>'Running Tips',
+                    'type'=> 'All students',
                     'description'=>'Running Tips',
                 ],
                 [
                     'name'=>'Swimming Club',
                     'title'=>'Swimming Tips',
+                    'type'=> 'All Students',
+                    'description'=>'Swimming Tips',
+                ],
+                [
+                    'name'=>'Swimming Club',
+                    'title'=>'Swimming Tips',
+                    'type'=> 'Club Members',
                     'description'=>'Swimming Tips',
                 ],
             ];

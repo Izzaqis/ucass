@@ -21,6 +21,15 @@
               <form enctype="multipart/form-data" method="post" action="{{ route('sharing.store') }}">
                 {{ csrf_field() }}
 
+                        <div class="row form-group">
+                            <div class="col col-md-14"><label for="Enter category" class=" form-control-label">Type</label>
+                                <select name="select" id="type" class="form-control" placeholder="Type">
+                                    <option value="0">Please Select</option>
+                                    <option value="1">All Student</option>
+                                    <option value="2">Club Members</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="Enter title">Title</label>
                             <input type="text" class="form-control" id="Enter title" placeholder="Title">

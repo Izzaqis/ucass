@@ -34,8 +34,9 @@
                 <thead>
                   <tr>
                     <th>Id</th>
+                    <th>Type</th>
                     <th>Title</th>
-                    <th>Edit</th>
+                    <th>Details</th>
                     <th>Delete</th>
                   </tr>
                 </thead>
@@ -44,6 +45,7 @@
                     @if (Auth::user()->club == $post->name)
                     <tr>
                         <td>{{$post->id}}</td>
+                        <td>{{$post->type}}</td>
                         <td>{{$post->title}}</td>
                         <td>
                             <a href="{{ route('sharing.edit',$post->id)}}" class="btn btn-primary">Edit</a>

@@ -13,6 +13,11 @@ class ClubController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function profile()
+    {
+        return view('committeeweb.editclubprofile');
+    }
+
     public function index()
     {
         $clubs = Club::all();

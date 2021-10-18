@@ -35,6 +35,8 @@ Route::resource('/admin/clubs', ClubController::class)->middleware('is_admin');
 Route::get('/committee/home', [HomeController::class, 'committeeHome'])->name('committeeweb.committeeHome')->middleware('is_admin');
 Route::resource('/committee/sharing', PostController::class)->middleware('is_admin');
 Route::resource('/committee/event', EventController::class)->middleware('is_admin');
+Route::get('/committee/event/participant/{id}', [UserAllController::class, 'show'])->name('events.detail')->middleware('is_admin');
+Route::get('/committee/profile', [ClubController::class, 'profile'])->name('club.profile') ->middleware('is_admin');
 // Route::resource('/committee/users', CommitteeController::class)->middleware('is_admin');
 // Route::get('/committee/student/approve/{id}', [CommitteeController::class, 'approved'])->name('users.student')->middleware('is_admin');
 

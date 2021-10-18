@@ -22,6 +22,15 @@
                         @method('PATCH')
                         @csrf
 
+                        <div class="row form-group">
+                            <div class="col col-md-14"><label for="Enter category" class=" form-control-label">Type</label>
+                                <select name="select" id="category" class="form-control" placeholder="Category">
+                                    <option value="0">{{ $event->type }}</option>
+                                    <option value="1">All Students</option>
+                                    <option value="2">Club Members</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="Enter Name">Name</label>
                             <input type="text" class="form-control" id="Enter name" placeholder="Name" value="{{ $event->name }}">
