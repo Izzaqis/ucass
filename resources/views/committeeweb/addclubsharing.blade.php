@@ -18,8 +18,12 @@
               <h4 class="card-title">Club Sharing Information</h4>
               <p class="card-description"> </p>
 
-              <form enctype="multipart/form-data" method="post" action="{{ route('sharing.store') }}">
-                {{ csrf_field() }}
+              {{-- <form enctype="multipart/form-data" method="post" action="{{ route('sharing.store') }}"> --}}
+                {{-- {{ csrf_field() }} --}}
+
+                <div class="card-body">
+                    <form method="POST" action="{{ route('sharing.store') }}">
+                        @csrf
 
                         <div class="row form-group">
                             <div class="col col-md-14"><label for="Enter category" class=" form-control-label">Type</label>
@@ -36,13 +40,11 @@
                         </div>
                         <div class="form-group">
                             <label for="Enter description">Description</label>
-                            <input type="text" class="form-control" id="Enter description" placeholder="Description">
+                            <textarea class="form-control" style="height:150px" name="Enter description" placeholder="Description"></textarea>
                         </div>
 
-                        {{-- <div class="form-group"> --}}
-                            {{-- <label for="Enter description">Description</label> --}}
-                            {{-- <textarea class="form-control" id="Enter description" rows="15" placeholder="Description" value="{{ $post->description }}" ></textarea> --}}
-                          {{-- </div> --}}
+                        {{-- <label for="Enter description">Description</label> --}}
+                        {{-- <input type="text" class="form-control" id="Enter description" placeholder="Description"> --}}
 
                         <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
                         <button class="btn btn-light">Cancel</button>

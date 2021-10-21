@@ -13,14 +13,24 @@
       </div>
 
         <div class="col-12 grid-margin stretch-card">
-          <div class="card">
+            <div class="card">
             <div class="card-body">
               <h4 class="card-title">Student Information</h4>
               <p class="card-description"> </p>
 
-              <div class="card-body card-block">
-                <form enctype="multipart/form-data" method="post" action="{{ route('users.update', $user->id) }}">
-                    @method('PATCH')
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+
+                <div class="card-body">
+                <form method="POST" action="{{ route('users.update', $user->id) }}">
                     {{ csrf_field() }}
 
                         <div class="form-group">
@@ -62,10 +72,9 @@
                 </div>
 
             </div>
+            </div>
         </div>
     </div>
-
-
 </div>
 
 @endsection

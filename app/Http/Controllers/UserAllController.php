@@ -47,13 +47,7 @@ class UserAllController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function show($id)
-    {
-        $event = Event::find($id);
-        $users = User::all();
-        return view('committeeweb.eventParticipant', compact(['events', 'users']));
-        // return view('adminweb.eventParticipant', compact('event'));
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -65,6 +59,14 @@ class UserAllController extends Controller
     {
         $user = User::find($id);
         return view('adminweb.edituser', compact('user'));
+    }
+
+    public function show($id)
+    {
+        $events = Event::find($id);
+        $users = User::all();
+        return view('committeeweb.eventParticipant', compact(['events', 'users']));
+        // return view('adminweb.eventParticipant', compact('event'));
     }
 
     /**
@@ -123,5 +125,27 @@ class UserAllController extends Controller
         $user->save();
 
         return redirect()->back();
+    }
+
+    public function attach(Request $request, $id)
+    {
+        //$user = User::find($uid);
+        $event = Event::find($id);
+
+        $uid = $request->get('id');
+        $user = User::find($uid);
+
+        $event->users()->attach($user);
+
+        return redirect()->back()->with('info','The participant added');
+    }
+
+    public function detach($eid, $uid)
+    {
+        $user = User::find($uid);
+        $event = Event::find($eid);
+        $event->users()->detach($user);
+
+        return redirect()->back()->with('info','The participant removed');
     }
 }

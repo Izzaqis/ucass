@@ -18,8 +18,12 @@
               <h4 class="card-title">Club Information</h4>
               <p class="card-description"> </p>
 
-                <form enctype="multipart/form-data" class="form-horizontal" method="post" action="{{ route('clubs.store') }}">
-                    {{ csrf_field() }}
+                {{-- <form enctype="multipart/form-data" class="form-horizontal" method="post" action="{{ route('clubs.store') }}"> --}}
+                    {{-- {{ csrf_field() }} --}}
+
+                <div class="card-body">
+                <form method="POST" action="{{ route('clubs.store') }}">
+                    @csrf
 
                     <div class="form-group">
                         <label for="Enter Name">Name</label>
@@ -33,7 +37,7 @@
                         <div class="col col-md-14"><label for="Enter Zone" class=" form-control-label">Zone</label>
                             <select name="select" id="zone" class="form-control" placeholder="Zone">
                                 <option value="0">Please Select</option>
-                                <option value="1">college</option>
+                                <option value="1">College</option>
                             </select>
                         </div>
                     </div>
@@ -59,7 +63,7 @@
                     <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
                 </form>
-
+                </div>
             </div>
             </div>
         </div>
