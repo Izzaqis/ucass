@@ -138,6 +138,7 @@ class UserAllController extends Controller
         $event->users()->attach($user);
 
         return redirect()->back()->with('info','The participant added');
+        //return redirect()->with('info','The participant added');
     }
 
     public function detach($eid, $uid)

@@ -18,6 +18,22 @@ class ClubController extends Controller
         return view('committeeweb.editclubprofile');
     }
 
+    public function saveprofile(Request $request, $id)
+    {
+        $request->validate([
+            'name'=>'required',
+            'description' => 'required',
+        ]);
+
+        $club = Club::find($id);
+        $club->name = $request->get('name');
+        $club->date = $request->get('description');
+        $club->save();
+
+        return redirect('/committee/profile')->with('success', 'Club Profile Updated!');
+    }
+
+
     public function index()
     {
         $clubs = Club::all();

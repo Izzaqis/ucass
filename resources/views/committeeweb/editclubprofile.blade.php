@@ -18,11 +18,37 @@
       </h3>
     </div>
 
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Club Profile Information</h4>
+            <p class="card-description"> </p>
+
+            <form method="post" action="{{ route('clubs.saveprofile', $club->id) }}">
+                @method('PATCH')
+                {{ csrf_field() }}
+
+                <div class="form-group">
+                    <label for="Enter Name">Club Name</label>
+                    <input type="text" class="form-control" id="Enter name" placeholder="Name" value="{{ $club->name }}">
+                </div>
+                <div class="form-group">
+                    <label for="Enter date">Club Description</label>
+                    <input type="text" class="form-control" id="Enter date" placeholder="Date" value="{{ $club->description }}">
+                </div>
+
+                    <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+
+
     <div class="row">
         <div class="col-12 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title">Recent Updates</h4>
+              <h4 class="card-title">Update</h4>
               <div class="d-flex">
                 <div class="d-flex align-items-center mr-4 text-muted font-weight-light">
                   <i class="mdi mdi-account-outline icon-sm mr-2"></i>

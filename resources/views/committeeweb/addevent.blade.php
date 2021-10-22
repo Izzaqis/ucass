@@ -92,21 +92,18 @@
                             </div>
                             <div class="form-group">
                                 <label for="Enter description">Description</label>
-                                <input type="text" class="form-control" id="Enter description" placeholder="Description">
+                                {{-- <input type="text" class="form-control" id="Enter description" placeholder="Description"> --}}
+                                <textarea name="description" rows="10" placeholder="Event Description" class="form-control" required></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Poster </label>
-                                <input type="file" name="img[]" class="file-upload-default">
-                                <div class="input-group col-xs-12">
-                                <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Poster">
-                                <span class="input-group-append">
-                                    <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
-                                </span>
-                                </div>
+                                <div class="input-group col-xs-12"><label for="file-input" class=" form-control-label">Event Picture</label></div>
+                                <input type="file" id="file-input" name="eventpic" class="form-control-file" required>
                             </div>
+
                             <div class="form-group">
                                 <label for="Enter note">Note</label>
-                                <input type="text" class="form-control" id="Enter note" placeholder="Note">
+                                {{-- <input type="text" class="form-control" id="Enter note" placeholder="Note"> --}}
+                                <textarea name="note" rows="10" placeholder="Event Note" class="form-control" required></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
@@ -117,8 +114,6 @@
             </div>
         </div>
     </div>
-
-
 </div>
 
 @endsection

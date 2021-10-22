@@ -18,7 +18,7 @@
               <h4 class="card-title">Club Sharing Information</h4>
               <p class="card-description"> </p>
 
-                    <form enctype="multipart/form-data" method="post" action="{{ route('sharing.update', $post->id) }}">
+                    <form method="post" action="{{ route('sharing.update', $post->id) }}">
                         @method('PATCH')
                         {{ csrf_field() }}
 
@@ -39,6 +39,11 @@
                             <label for="Enter description">Description</label>
                             <input type="text" class="form-control" id="Enter description" placeholder="Description" value="{{ $post->description }}">
                         </div>
+
+                        {{-- <div class="form-group"> --}}
+                            {{-- <label for="Enter description">Description</label> --}}
+                            {{-- <textarea class="form-control" style="height:150px" name="Enter description" placeholder="Description" value="{{ $post->description }}"></textarea> --}}
+                        {{-- </div> --}}
 
                         {{-- <div class="form-group"> --}}
                             {{-- <label for="Enter description">Description</label> --}}
