@@ -18,19 +18,9 @@
               <h4 class="card-title">Student Information</h4>
               <p class="card-description"> </p>
 
-                @if ($errors->any())
-                <div class="alert alert-danger">
-                    <strong>Whoops!</strong> There were some problems with your input.<br><br>
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif
-
                 <div class="card-body">
-                <form method="POST" action="{{ route('users.update', $user->id) }}">
+                <form method="post" action="{{ route('users.update', $user->id) }}">
+                @method('PATCH')
                     {{ csrf_field() }}
 
                         <div class="form-group">

@@ -99,7 +99,6 @@
                                 <div class="input-group col-xs-12"><label for="file-input" class=" form-control-label">Event Picture</label></div>
                                 <input type="file" id="file-input" name="eventpic" class="form-control-file" required>
                             </div>
-
                             <div class="form-group">
                                 <label for="Enter note">Note</label>
                                 {{-- <input type="text" class="form-control" id="Enter note" placeholder="Note"> --}}

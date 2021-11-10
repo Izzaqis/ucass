@@ -96,15 +96,9 @@
                             <input type="text" class="form-control" id="Enter description" placeholder="Description" value="{{ $event->description }}">
                         </div>
                         <div class="form-group">
-                            <label>Poster </label>
-                            <input type="file" name="img[]" class="file-upload-default">
-                            <div class="input-group col-xs-12">
-                              <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Poster">
-                              <span class="input-group-append">
-                                <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
-                              </span>
-                            </div>
-                          </div>
+                            <div class="input-group col-xs-12"><label for="file-input" class=" form-control-label">Event Picture</label></div>
+                            <input type="file" id="file-input" name="eventpic" class="form-control-file" required>
+                        </div>
                         <div class="form-group">
                             <label for="Enter note">Note</label>
                             <input type="text" class="form-control" id="Enter note" placeholder="Note" value="{{ $event->note }}">

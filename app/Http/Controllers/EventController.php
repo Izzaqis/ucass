@@ -53,6 +53,8 @@ class EventController extends Controller
             'eventime' => 'required',
         ]);
 
+        $fileName = "poster-" . time() . '.' . request()->poster->getClientOriginalExtension();
+
         $event = new Event([
             'name'=> $request->get('name'),
             'date'=> $request->get('date'),
@@ -66,8 +68,8 @@ class EventController extends Controller
             'fundtransport' => $request->get('fundtransport'),
             'description' => $request->get('description'),
             'note' => $request->get('note'),
-            'poster' => $request->get('poster'),
-            'eventime' => $request->get('eventime'),
+            'poster' => $request->poster->storeAs('poster', $fileName),
+            'eventime' => $request->get('eventime')
         ]);
 
         $event->save();
@@ -119,10 +121,9 @@ class EventController extends Controller
             'fundtransport' => 'required',
             'description' => 'required',
             'note'=>'required',
-            'poster' => 'required',
+            'poster' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'eventime' => 'required',
         ]);
-
 
         $event = Event::find($id);
         $event->name = $request->get('name');
@@ -137,12 +138,13 @@ class EventController extends Controller
         $event->fundtransport = $request->get('fundtransport');
         $event->description = $request->get('description');
         $event->note = $request->get('note');
-        $event->poster = $request->get('poster');
+        $fileName = "poster-" . time() . '.' . request()->poster->getClientOriginalExtension();
         $event->eventime = $request->get('eventime');
         $event->save();
 
         return redirect('/committee/event')->with('success', 'Event Information Updated!');
     }
+
 
     /**
      * Remove the specified resource from storage.
