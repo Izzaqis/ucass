@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Club;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ClubController extends Controller
 {
@@ -15,7 +16,11 @@ class ClubController extends Controller
      */
     public function profile()
     {
-        return view('committeeweb.editclubprofile');
+        $clubname = Auth::user()->club;
+
+        /** @var \Illuminate\Database\Eloquent\Collection $userProducts !!!*/
+        $club = Club::where('name', $clubname)->first();
+        return view('committeeweb.editclubprofile', compact('club'));
     }
 
     public function saveprofile(Request $request, $id)
@@ -23,11 +28,15 @@ class ClubController extends Controller
         $request->validate([
             'name'=>'required',
             'description' => 'required',
+            'clubpic' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
         $club = Club::find($id);
         $club->name = $request->get('name');
         $club->date = $request->get('description');
+        $fileName = "clubpic-" . time() . '.' . request()->clubpic->getClientOriginalExtension();
+
+
         $club->save();
 
         return redirect('/committee/profile')->with('success', 'Club Profile Updated!');

@@ -18,42 +18,43 @@
               <h4 class="card-title">Student Information</h4>
               <p class="card-description"> </p>
 
-                <div class="card-body">
+
+              <div class="card-body">
                 <form method="post" action="{{ route('users.update', $user->id) }}">
                 @method('PATCH')
                     {{ csrf_field() }}
 
                         <div class="form-group">
                             <label for="Enter Name">Name</label>
-                            <input type="text" class="form-control" id="Enter name" placeholder="Name" value="{{ $user->name }}">
+                            <input type="text" class="form-control" id="name" placeholder="Name" value="{{ $user->name }}">
                         </div>
                         <div class="form-group">
                             <label for="Enter phone number">Phone Number</label>
-                            <input type="text" class="form-control" id="Enter phone number" placeholder="Mobile" value="{{ $user->mobile }}">
+                            <input type="text" class="form-control" id="mobile" placeholder="Mobile" value="{{ $user->mobile }}">
                         </div>
                         <div class="form-group">
                             <label for="Enter address">Address</label>
-                            <input type="text" class="form-control" id="Enter address" placeholder="Address" value="{{ $user->address }}">
+                            <input type="text" class="form-control" id="address" placeholder="Address" value="{{ $user->address }}">
                         </div>
                         <div class="form-group">
                             <label for="Enter poscode">Poscode</label>
-                            <input type="text" class="form-control" id="Enter poscode" placeholder="Poscode" value="{{ $user->poscode }}">
+                            <input type="text" class="form-control" id="poscode" placeholder="Poscode" value="{{ $user->poscode }}">
                         </div>
                         <div class="form-group">
                             <label for="Enter city">City</label>
-                            <input type="text" class="form-control" id="Enter city" placeholder="City" value="{{ $user->city }}">
+                            <input type="text" class="form-control" id="city" placeholder="City" value="{{ $user->city }}">
                         </div>
                         <div class="form-group">
                             <label for="Enter email">Email</label>
-                            <input type="text" class="form-control" id="Enter email" placeholder="Email" value="{{ $user->email }}">
+                            <input type="text" class="form-control" id="email" placeholder="Email" value="{{ $user->email }}">
                         </div>
                         <div class="form-group">
                             <label for="Enter role">Role</label>
-                            <input type="text" class="form-control" id="Enter role" placeholder="Role" value="{{ $user->role }}">
+                            <input type="text" class="form-control" id="role" placeholder="Role" value="{{ $user->role }}">
                         </div>
                         <div class="form-group">
                             <label for="Enter club">Club</label>
-                            <input type="text" class="form-control" id="Enter club" placeholder="Club" value="{{ $user->club }}">
+                            <input type="text" class="form-control" id="club" placeholder="Club" value="{{ $user->club }}">
                         </div>
 
                         <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>

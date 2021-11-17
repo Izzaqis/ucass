@@ -18,20 +18,17 @@
               <h4 class="card-title">Club Information</h4>
               <p class="card-description"> </p>
 
-                {{-- <form enctype="multipart/form-data" class="form-horizontal" method="post" action="{{ route('clubs.store') }}"> --}}
-                    {{-- {{ csrf_field() }} --}}
-
                 <div class="card-body">
                 <form method="POST" action="{{ route('clubs.store') }}">
                     @csrf
 
                     <div class="form-group">
                         <label for="Enter Name">Name</label>
-                        <input type="text" class="form-control" id="Enter name" placeholder="Name">
+                        <input type="text" class="form-control" id="name" placeholder="Name">
                     </div>
                     <div class="form-group">
                         <label for="Enter date">Date of Establishment</label>
-                        <input type="text" class="form-control" id="Enter date" placeholder="Date">
+                        <input type="text" class="form-control" id="date" placeholder="Date">
                     </div>
                     <div class="row form-group">
                         <div class="col col-md-14"><label for="Enter Zone" class=" form-control-label">Zone</label>
@@ -57,7 +54,7 @@
 
                     <div class="form-group">
                         <label for="Enter advisor">Advisor</label>
-                        <input type="text" class="form-control" id="Enter advisor" placeholder="Advisor">
+                        <input type="text" class="form-control" id="advisor" placeholder="Advisor">
                     </div>
 
                     <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>

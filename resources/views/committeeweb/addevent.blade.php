@@ -22,7 +22,7 @@
                         {{ csrf_field() }}
 
                             <div class="row form-group">
-                                <div class="col col-md-14"><label for="Enter category" class=" form-control-label">Type</label>
+                                <div class="col col-md-14"><label for="category" class=" form-control-label">Type</label>
                                     <select name="select" id="category" class="form-control" placeholder="Category">
                                         <option value="0">Please Select</option>
                                         <option value="1">All Student</option>
@@ -32,22 +32,22 @@
                             </div>
                             <div class="form-group">
                                 <label for="Enter Name">Name</label>
-                                <input type="text" class="form-control" id="Enter name" placeholder="Name">
+                                <input type="text" class="form-control" id="name" placeholder="Name">
                             </div>
                             <div class="form-group">
                                 <label for="Enter date">Date</label>
-                                <input type="text" class="form-control" id="Enter date" placeholder="Date">
+                                <input type="text" class="form-control" id="date" placeholder="Date">
                             </div>
                             <div class="form-group">
                                 <label for="Enter event name">Event Name</label>
-                                <input type="text" class="form-control" id="Enter event name" placeholder="Event Name">
+                                <input type="text" class="form-control" id="eventname" placeholder="Event Name">
                             </div>
                             <div class="form-group">
                                 <label for="Enter time">Time</label>
-                                <input type="text" class="form-control" id="Enter time" placeholder="Event Time">
+                                <input type="text" class="form-control" id="eventime" placeholder="Event Time">
                             </div>
                             <div class="row form-group">
-                                <div class="col col-md-14"><label for="Enter category" class=" form-control-label">Category</label>
+                                <div class="col col-md-14"><label for="category" class=" form-control-label">Category</label>
                                     <select name="select" id="category" class="form-control" placeholder="Category">
                                         <option value="0">Please Select</option>
                                         <option value="1">Art & Cultural</option>
@@ -72,37 +72,37 @@
                             </div>
                             <div class="form-group">
                                 <label for="Enter organizer">Organizer</label>
-                                <input type="text" class="form-control" id="Enter organizer" placeholder="Organizer">
+                                <input type="text" class="form-control" id="organizer" placeholder="Organizer">
                             </div>
                             <div class="form-group">
                                 <label for="Enter location">Location</label>
-                                <input type="text" class="form-control" id="Enter location" placeholder="Location">
+                                <input type="text" class="form-control" id="location" placeholder="Location">
                             </div>
                             <div class="form-group">
                                 <label for="Enter link">Link</label>
-                                <input type="text" class="form-control" id="Enter link" placeholder="Link">
+                                <input type="text" class="form-control" id="link" placeholder="Link">
                             </div>
                             <div class="form-group">
                                 <label for="Enter funding (cash)">UNITEN Funding (Cash)</label>
-                                <input type="text" class="form-control" id="Enter funding (cash)" placeholder="Funding (Cash)">
+                                <input type="text" class="form-control" id="fundcash" placeholder="Funding (Cash)">
                             </div>
                             <div class="form-group">
                                 <label for="Enter funding (cash)">UNITEN Funding (Transport)</label>
-                                <input type="text" class="form-control" id="Enter funding (transport)" placeholder="Funding (Transport)">
+                                <input type="text" class="form-control" id="fundtransport" placeholder="Funding (Transport)">
                             </div>
                             <div class="form-group">
                                 <label for="Enter description">Description</label>
                                 {{-- <input type="text" class="form-control" id="Enter description" placeholder="Description"> --}}
-                                <textarea name="description" rows="10" placeholder="Event Description" class="form-control" required></textarea>
+                                <textarea name="description" rows="10" placeholder="description" class="form-control" required></textarea>
                             </div>
                             <div class="form-group">
-                                <div class="input-group col-xs-12"><label for="file-input" class=" form-control-label">Event Picture</label></div>
-                                <input type="file" id="file-input" name="eventpic" class="form-control-file" required>
+                                <div class="input-group col-xs-12"><label for="file-input" class=" form-control-label">Event Poster</label></div>
+                                <input type="file" id="file-input" name="poster" class="form-control-file" required>
                             </div>
                             <div class="form-group">
                                 <label for="Enter note">Note</label>
                                 {{-- <input type="text" class="form-control" id="Enter note" placeholder="Note"> --}}
-                                <textarea name="note" rows="10" placeholder="Event Note" class="form-control" required></textarea>
+                                <textarea name="note" rows="10" placeholder="note" class="form-control" required></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
